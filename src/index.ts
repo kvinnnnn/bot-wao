@@ -25,7 +25,12 @@ const flowDesmutearBot = BotWhatsapp.addKeyword('finalizar')
     }
   });
 
-const FlujoPrincipal = BotWhatsapp.addKeyword(['buenos dias'])
+const flowSaludo = BotWhatsapp.addKeyword(['hola, buenos dias, buenas '])
+ .addAnswer('🙌 ¡Bienvenido! Soy tu asistente virtual de *WAO Internet*. Gracias por comunicarte con nosotros')
+ .addAnswer('¡En que puedo ayudarte?')
+
+
+  const FlujoPrincipal = BotWhatsapp.addKeyword(['estado'])
   
   .addAction(async (ctx, { flowDynamic, state }) => {
     const numeroCliente = ctx.from;
